@@ -1,6 +1,5 @@
 python-telegram-bot>=21.0
 httpx>=0.27
 groq
-GoogleLens
-google-image-source-search
-pypdf>=5.0
+googlelens
+google-img-source-search

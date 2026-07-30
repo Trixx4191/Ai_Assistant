@@ -86,7 +86,7 @@ warnings.filterwarnings(
     message=r"urllib3 .* doesn't match a supported version!",
 )
 
-# ── Optional reverse-search libraries 
+#  Optional reverse-search libraries 
 try:
     from googlelens import GoogleLens
 except Exception:
@@ -98,7 +98,7 @@ except Exception:
     ReverseImageSearcher = None
 
 
-# ── In-memory conversation store ───────────────
+#  In-memory conversation store 
 # Keyed by chat_id (int).  Each value is a deque of {"role": ..., "content": ...}
 _memory: dict[int, deque[dict[str, Any]]] = defaultdict(
     lambda: deque(maxlen=MEMORY_TURNS * 2)  # *2 because user+assistant each count
@@ -120,7 +120,7 @@ def clear_history(chat_id: int) -> None:
     _memory[chat_id].clear()
 
 
-# ── Tone detection ──────────────────────────────
+#  Tone detection 
 _CASUAL_SIGNALS = {"lol", "lmao", "haha", "wtf", "omg", "bruh", "bro", "sis", "ngl",
                    "tbh", "fr", "ik", "idk", "smh", "imo", "rn", "wyd", "wbu", "yo",
                    "sup", "dude", "fam", "lit", "vibe", "lowkey", "highkey"}

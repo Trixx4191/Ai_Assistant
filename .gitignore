@@ -2,3 +2,14 @@ config.py
 venv/
 __pycache__/
 .env
+
+# Local notes and private workspace files
+/private/
+/personal/
+/review/
+/notes/private/
+/.agents/
+/.codex/
+/.claude/
+/.aws/
+/.codex
